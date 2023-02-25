@@ -55,3 +55,25 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+
+## How to setup locally
+**Step1**. Postgres user and password should be **postgres**
+
+```
+psql -U postgres
+
+create database strapi
+exit
+
+pg_restore -d strapi strapi.dump -U postgres
+```
+**Step2**. If didn't worked run this command
+```
+ brew install postgresql
+```
+after repeat step1
+and run
+```
+yarn develop
+```
